@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head><title>About Face</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="slick/slick.css">
+<link rel="stylesheet" href="slick/slick-theme.css">
+
+
+</head>
+<style>
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url ("https://www.expiritco.com/wp-content/uploads/2018/05/logo.png");
+    min-height: 400px;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("http://losaltosgirlscouts.org/wp-content/uploads/2017/11/best-natural-makeup-look.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("https://files.kstatecollegian.com/2018/02/Augu.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-4 {
+    background-image: url("https://4.bp.blogspot.com/-zmq8DkXBMM8/V0VOjt3OycI/AAAAAAAA0Yc/BoOL86bqiM86yU53-iEUePusN4OG3dI9ACLcB/s1600/MAC%2BCosmetics%2BStudio%2BWaterweight%2BSPF%2B30%2BFoundation%2BReview%2BSwatches%2B%25283%2529.JPG");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-5 {
+    background-image: url("https://az616578.vo.msecnd.net/files/2016/09/24/636102775621427598-87859067_Makeup-Brushes.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Store) */
+.bgimg-6 {
+    background-image: url("https://az616578.vo.msecnd.net/files/2016/09/24/636102775621427598-87859067_Makeup-Brushes.jpg");
+    min-height: 400px;
+}
+
+.bgimg-7 {
+    background-image: url("http://tashietinks.com/wp-content/uploads/2015/09/fall-makeup.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 .bgimg-4 .bgimg-5 .bgimg-6{
+        background-attachment: scroll;
+    }
+}
+
+
+.carousel .carousel-item img{
+width: 95%;
+    margin: 0 auto;
+}
+.slick-prev {
+    left: 15px;
+    z-index: 999;
+}
+.slick-next {
+    right: 15px;
+    z-index: 999;
+}
+.face-text{
+    font-size: 1em !important;
+}
+@media only screen and (min-width: 640px) {
+
+.face-text { 
+   font-size: 3em !important; 
+}
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-black" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="Home.html" class="w3-bar-item w3-button">HOME</a>
+   <div class="w3-dropdown-hover">
+    <button href="About.html" class="w3-button w3-black"><i class="fa fa-user"></i> ABOUT</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="About.html" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="FAQ.html" class="w3-bar-item w3-button">FAQ</a>
+    </div>
+  </div>
+    <a href="Portfolio.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+     <a href="Store.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-cart-plus"></i> STORE</a>
+   	
+   
+    <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black"><i class="fa fa-envelope"></i> CONTACT</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="Book.html" class="w3-bar-item w3-button">BOOK</a>
+      <a href="Contact.html" class="w3-bar-item w3-button">CONTACT</a>
+     
+    </div>
+  </div>
+	      
+    </div>
+   </div>
+   <!--logo-->
+  <img id="logo" src="https://www.expiritco.com/wp-content/uploads/2018/05/logo.png">
+  
+
+    <div class="carousel">
+        <i class="carousel-item"><img src="data:image/jpeg;base64,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" ></i>
+        <i class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTseKPue7-7TMBmksUuJu4BCbt2j5s8-zU1qi8YGs5iOn-XIczJ" ></i>
+        <i class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqlWKsPZapzusOlfsCzfq4LO9D_X8LC-8HHQ5FtYB70ffxjgOe" ></i>
+        <i class="carousel-item"><img src="https://scontent-ort2-1.cdninstagram.com/vp/341dd8d13229e63b9d04ac4e4ac99a15/5B466B57/t51.2885-15/s320x320/e35/12479174_1259040594112275_177956952_n.jpg?ig_cache_key=MTE3MjA3NzUxMTA0NjcyNjgzNw%3D%3D.2" ></i>
+        <i class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhbzsBekYfrf4F73KBhbh3tGF7b6WQG1oL3RaxKHlG9qWsO2DR"></i>
+      </div>
+                       
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-opacity w3-xxlarge w3-wide w3-animate-opacity face-text">ABOUT FACE MAKEUP </span> 
+ 	
+ </div>
+</div>
+
+
+<!-- Second Parallax Image with ABOUT Text -->
+	<div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">
+    	<a href="About.html" style="text-decoration: none">ABOUT</a>
+    	</span>
+  </div>
+</div>
+
+
+<!-- Third Parallax Image with Portfolio Text -->
+	<div class="bgimg-7 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">
+    	<a href="Portfolio.html" style="text-decoration: none">PORTFOLIO</a>
+    	</span>
+  </div>
+</div>
+
+<!-- Forth Parallax Image with Store Text -->
+	<div class="bgimg-6 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">
+    	<a href="Store.html" style="text-decoration: none">ONLINE STORE</a>
+    	</span>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+<!-- Third Parallax Image with Contact Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">
+     <a href="Contact.html" style="text-decoration:none">CONTACT</a>
+     </span>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="w3-hover-opacity"><a href="https://www.facebook.com/Perivah-Charach-Makeup-Artist-189117231109676/"><img src="https://cdn.techgyd.com/50-Best-Facebook-Logo-Icons-GIF-Transparent-PNG-Images-37.png" height="50"></a></i>
+    <i class="w3-hover-opacity"><a href="https://www.instagram.com/makeupbypriva/?hl=en"><img src="https://s3.amazonaws.com/freebiesupply/large/2x/instagram-icon-white-on-black.png" height="50"></a></i>
+    <i class="w3-hover-opacity"><a href="https://www.linkedin.com/in/perivah-charach-31193118"><img src="data:image/png;base64,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" height="30"></a></i>
+  </div>
+  <p>Powered by <a href="" title="DevoryShira"  class="w3-hover-text-green">Devory&Shira</a></p>
+</footer>
+ 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>     
+<script src="slick/slick.min.js"></script>
+<script src="home.js"></script>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+<script>
+$(document).ready(function(){
+  $('.carousel').slick({
+  arrows: true,
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+
+  });
+});
+				
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head><title>About Face</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</head>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-black" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="Home.html" class="w3-bar-item w3-button">HOME</a>
+   <div class="w3-dropdown-hover">
+    <button href="About.html" class="w3-button w3-black"><i class="fa fa-user"></i> ABOUT</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="About.html" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="FAQ.html" class="w3-bar-item w3-button">FAQ</a>
+    </div>
+  </div>
+    <a href="Portfolio.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+     <a href="Store.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-cart-plus"></i> STORE</a>
+   	
+   
+    <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black"><i class="fa fa-envelope"></i> CONTACT</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="Book.html" class="w3-bar-item w3-button">BOOK</a>
+      <a href="Contact.html" class="w3-bar-item w3-button">CONTACT</a>
+     
+    </div>
+  </div>
+	      
+    </div>
+   </div>
+    </div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  	<a href="Home.html" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    <a href="About.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="Portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="Store.html" class="w3-bar-item w3-button" onclick="toggleFunction()">STORE</a>
+    <a href="Quiz.html" class="w3-bar-item w3-button" onclick="toggleFunction()">QUIZES</a>
+    <a href="Contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+   
+  </div>
+<img src="https://www.expiritco.com/wp-content/uploads/2018/05/logo.png">
+
+<h2 style="padding-top: 50px;">FAQ</h2>
+
+<button class="accordion">How much do you charge per face, and how long does each face take?</button>
+<div class="panel">
+  <p>I charge $150 per face and each face takes about an hour to do.</p>
+</div>
+
+<button class="accordion">Do you come back after the chupah?</button>
+<div class="panel">
+  <p>Yes, I do charge an extra fee in order to come back but it is an option if you want.</p>
+</div>
+
+<button class="accordion">Do you travel, or do we have to come to you?</button>
+<div class="panel">
+  <p>Depends. For less than 4 faces you will have to come to me. If you have at least 4 faces
+					I will come to you. However, I only travel within the tri-state area and for anywhere out of 
+					brooklyn I charge a traveling fee.</p>
+
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="Home.html" class="w3-button w3-light-grey">Back to Home</a>
+  <div class="w3-xlarge w3-section">
+    <i class="w3-hover-opacity"><a href="https://www.facebook.com/Perivah-Charach-Makeup-Artist-189117231109676/"><img src="https://cdn.techgyd.com/50-Best-Facebook-Logo-Icons-GIF-Transparent-PNG-Images-37.png" height="50"></a></i>
+    <i class="w3-hover-opacity"><a href="https://www.instagram.com/makeupbypriva/?hl=en"><img src="https://s3.amazonaws.com/freebiesupply/large/2x/instagram-icon-white-on-black.png" height="50"></a></i>
+    <i class="w3-hover-opacity"><a href="https://www.linkedin.com/in/perivah-charach-31193118"><img src="data:image/png;base64,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" height="30"></a></i>
+  </div>
+  <p>Powered by <a href="" title="DevoryShira"  class="w3-hover-text-green">Devory&Shira</a></p>
+</footer>
+
+</html>

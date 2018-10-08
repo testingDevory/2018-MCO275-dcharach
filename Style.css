@@ -1,0 +1,31 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+p {
+
+		font-size: 10pt;
+		
+	}
+
+
+}
+#products {
+	p {
+		font-size: 22pt;
+		
+	}
+	
+	img {
+	max-height: 125pt
+}
+}
+
+.w3-row-padding .w3-center{
+	img{
+		height: 120pt
+	}
+}
